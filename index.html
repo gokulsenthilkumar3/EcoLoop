@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0c5a45" />
+    <title>EcoLoop — From waste to worth</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="side-panel">
+        <a class="brand" href="#home" aria-label="EcoLoop home"><span class="brand-mark">↻</span><span>ecoloop</span></a>
+        <p class="side-kicker">YOUR CIRCULAR LIFE</p>
+        <h1>Waste less.<br />Live more.</h1>
+        <p class="side-copy">A kinder way to care for the place you call home.</p>
+        <div class="side-impact"><span>♧</span><div><strong>3.4 kg</strong><small>kept in the loop this month</small></div></div>
+        <div class="side-orb orb-one"></div><div class="side-orb orb-two"></div>
+      </aside>
+
+      <section class="phone" aria-label="EcoLoop citizen app">
+        <header class="topbar">
+          <div><p class="eyebrow">Saturday, 03 October</p><h2 id="page-title">Good morning, Aarav</h2></div>
+          <button class="avatar" aria-label="Open profile">AK</button>
+        </header>
+
+        <div id="content" class="content"></div>
+
+        <nav class="bottom-nav" aria-label="Main navigation">
+          <button data-page="home" class="nav-item active" aria-label="Home"><i data-icon="home"></i><span>Home</span></button>
+          <button data-page="schedule" class="nav-item" aria-label="Schedule"><i data-icon="calendar"></i><span>Schedule</span></button>
+          <button data-page="scan" class="scan-button" aria-label="Scan an item"><i data-icon="scan"></i></button>
+          <button data-page="rewards" class="nav-item" aria-label="Rewards"><i data-icon="gift"></i><span>Rewards</span></button>
+          <button data-page="profile" class="nav-item" aria-label="Profile"><i data-icon="user"></i><span>Profile</span></button>
+        </nav>
+      </section>
+    </main>
+    <div id="modal-root"></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+    <script src="client.js"></script>
+  </body>
+</html>

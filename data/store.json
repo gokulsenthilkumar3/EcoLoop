@@ -1,0 +1,43 @@
+{
+  "profile": {
+    "id": "citizen-aarav",
+    "name": "Aarav Khanna",
+    "initials": "AK",
+    "ward": "Ward 12",
+    "address": "Green Park, Ward 12",
+    "tier": "Silver"
+  },
+  "impact": {
+    "points": 1240,
+    "recycledKg": 18.6,
+    "co2Kg": 4.2
+  },
+  "pickups": [],
+  "grievances": [],
+  "redemptions": [],
+  "scans": [],
+  "activity": [],
+  "bins": [
+    {
+      "id": "GP-041",
+      "type": "Dry waste",
+      "distanceM": 230,
+      "location": "Park entrance",
+      "fillPercent": 42
+    },
+    {
+      "id": "GP-038",
+      "type": "Mixed recycling",
+      "distanceM": 410,
+      "location": "Market road",
+      "fillPercent": 68
+    },
+    {
+      "id": "GP-029",
+      "type": "E-waste",
+      "distanceM": 490,
+      "location": "Community centre",
+      "fillPercent": 19
+    }
+  ]
+}

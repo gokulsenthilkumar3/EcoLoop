@@ -1,0 +1,12 @@
+const { DatabaseSync } = require('node:sqlite');
+const { mkdirSync } = require('node:fs');
+const { join } = require('node:path');
+mkdirSync(join(__dirname, '../data'), { recursive: true });
+const db = new DatabaseSync(process.env.ECOLOOP_DB || join(__dirname, '../data/ecoloop.sqlite'));
+db.exec(`PRAGMA foreign_keys=ON;
+CREATE TABLE IF NOT EXISTS users(id TEXT PRIMARY KEY, email TEXT UNIQUE NOT NULL, name TEXT NOT NULL, password TEXT NOT NULL, role TEXT NOT NULL DEFAULT 'citizen', created_at TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS sessions(token_hash TEXT PRIMARY KEY, user_id TEXT NOT NULL REFERENCES users(id), expires_at INTEGER NOT NULL);
+CREATE TABLE IF NOT EXISTS accounts(user_id TEXT PRIMARY KEY REFERENCES users(id), state TEXT NOT NULL);
+CREATE TABLE IF NOT EXISTS audit(id INTEGER PRIMARY KEY, user_id TEXT REFERENCES users(id), action TEXT NOT NULL, created_at TEXT NOT NULL);
+`);
+module.exports = db;
