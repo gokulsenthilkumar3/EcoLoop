@@ -10,7 +10,7 @@ From this folder, start the EcoLoop local server:
 npm.cmd start
 ```
 
-Then open `http://localhost:3000` in a browser. The server also serves the web client and persists the MVP data in `data/store.json`.
+Then open `http://localhost:3000` in a browser. The server also serves the web client and persists authenticated account data in SQLite at `data/ecoloop.sqlite`.
 
 ## Included flows
 
@@ -36,3 +36,9 @@ The dependency-free Node server exposes the first MVP resources from the bluepri
 - `GET /api/activity` and `POST /api/reset`
 
 Run `npm.cmd run check` to validate the client and server JavaScript.
+
+## Development with Codex CLI
+
+Start `codex` from this repository. `AGENTS.md` defines the development guidelines; [docs/CODEX_WORKFLOW.md](docs/CODEX_WORKFLOW.md) contains the implementation and resume prompts. [docs/DEVELOPMENT_PLAN.md](docs/DEVELOPMENT_PLAN.md) records the inspected gaps, phased work, and acceptance gates for architecture, UI/UX, auth, APIs, ORM/migrations, PostgreSQL RLS, security, caching, and CI/CD.
+
+The guidelines and plan are preparation for implementation. Their production requirements remain pending until the implementation and verification evidence are recorded.
